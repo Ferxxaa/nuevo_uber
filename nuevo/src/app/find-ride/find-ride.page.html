@@ -8,11 +8,11 @@
   <div class="content-wrapper">
     <form (ngSubmit)="onSubmit()" class="form-wrapper">
       <ion-item class="input-item">
-        <ion-label position="floating"></ion-label>
+        <ion-label position="floating">Origen</ion-label>
         <ion-input placeholder="Introduce el origen"></ion-input>
       </ion-item>
       <ion-item class="input-item">
-        <ion-label position="floating"></ion-label>
+        <ion-label position="floating">Destino</ion-label>
         <ion-input placeholder="Introduce el destino"></ion-input>
       </ion-item>
 
@@ -34,8 +34,13 @@
 
       <ion-button expand="block" type="submit" class="submit-button">Buscar</ion-button>
     </form>
+    <div *ngFor="let vehicle of vehicles">
+      <button (click)="selectVehicle(vehicle)">
+        Seleccionar {{ vehicle.name }} <!-- Asegúrate de que 'name' es una propiedad válida -->
+      </button>
+    </div>
 
     <!-- Map Container -->
-    <div id="map" class="map-container"></div>
+    <app-map></app-map> <!-- Agregamos el componente del mapa aquí -->
   </div>
 </ion-content>
