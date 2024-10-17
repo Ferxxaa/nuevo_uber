@@ -55,3 +55,29 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+app-map {
+  height: 300px; /* Ajusta la altura según lo necesites */
+  width: 100%;
+}
+
+.form-wrapper {
+  padding: 16px; /* Espaciado interno */
+  background-color: white; /* Color de fondo para el formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.vehicle-selection {
+  margin-top: 16px; /* Margen superior para separar del formulario */
+}
+
+ion-button.submit-button {
+  margin-top: 16px; /* Espacio entre el botón y los elementos anteriores */
+}
